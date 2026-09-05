@@ -78,6 +78,7 @@ for i, value in enumerate(studytime_avg):
     plt.text(i, value + 0.1, f"{value:.2f}", ha="center")
 
 plt.tight_layout()
+plt.savefig("visualizations/study_time_vs_final_grade.png", dpi=300)
 plt.show()
 
 
@@ -104,6 +105,7 @@ for i, value in enumerate(failures_avg):
     plt.text(i, value + 0.1, f"{value:.2f}", ha="center")
 
 plt.tight_layout()
+plt.savefig("visualizations/previous_failures_vs_final_grade.png", dpi=300)
 plt.show()
 
 # Gender analysis
@@ -124,6 +126,7 @@ for i, value in enumerate(gender_avg):
     plt.text(i, value + 0.1, f"{value:.2f}", ha="center")
 
 plt.tight_layout()
+plt.savefig("visualizations/gender_vs_final_grade.png", dpi=300)
 plt.show()
 
 
@@ -145,6 +148,7 @@ for i, value in enumerate(internet_avg):
     plt.text(i, value + 0.1, f"{value:.2f}", ha="center")
 
 plt.tight_layout()
+plt.savefig("visualizations/internet_access_vs_final_grade.png", dpi=300)
 plt.show()
 
 
@@ -166,6 +170,7 @@ for i, value in enumerate(medu_avg):
     plt.text(i, value + 0.1, f"{value:.2f}", ha="center")
 
 plt.tight_layout()
+plt.savefig("visualizations/mother_education_vs_final_grade.png", dpi=300)
 plt.show()
 
 
@@ -187,6 +192,7 @@ for i, value in enumerate(fedu_avg):
     plt.text(i, value + 0.1, f"{value:.2f}", ha="center")
 
 plt.tight_layout()
+plt.savefig("visualizations/fathers_education_vs_final_grade.png", dpi=300)
 plt.show()
 
 
@@ -208,6 +214,7 @@ for i, value in enumerate(schoolsup_avg):
     plt.text(i, value + 0.1, f"{value:.2f}", ha="center")
 
 plt.tight_layout()
+plt.savefig("visualizations/school_support_vs_final_grade.png", dpi=300)
 plt.show()
 
 
@@ -229,6 +236,7 @@ for i, value in enumerate(famsup_avg):
     plt.text(i, value + 0.1, f"{value:.2f}", ha="center")
 
 plt.tight_layout()
+plt.savefig("visualizations/family_support_vs_final_grade.png", dpi=300)
 plt.show()
 
 # Higher education intention analysis
@@ -249,6 +257,7 @@ for i, value in enumerate(higher_avg):
     plt.text(i, value + 0.1, f"{value:.2f}", ha="center")
 
 plt.tight_layout()
+plt.savefig("visualizations/higher_education_vs_final_grade.png", dpi=300)
 plt.show()
 
 
@@ -270,6 +279,7 @@ plt.ylabel("Final Grade")
 plt.grid(True, linestyle="--", alpha=0.5)
 
 plt.tight_layout()
+plt.savefig("visualizations/second_period_vs_final_grade.png", dpi=300)
 plt.show()
 
 # Absences vs final grade
@@ -281,11 +291,25 @@ plt.ylabel("Final Grade")
 plt.grid(True, linestyle="--", alpha=0.5)
 
 plt.tight_layout()
+plt.savefig("visualizations/absences_vs_final_grade.png", dpi=300)
 plt.show()
 
 # Age vs final grade correlation
 print("\n--- Age Analysis ---")
 print(df[["Age", "Final_Grade"]].corr().round(2))
+
+age_grade_corr = df[["Age", "Final_Grade"]].corr().iloc[0, 1]
+
+plt.scatter(df["Age"], df["Final_Grade"])
+
+plt.title("Age vs Final Grade", fontsize=14)
+plt.xlabel("Age")
+plt.ylabel("Final Grade")
+plt.grid(True, linestyle="--", alpha=0.5)
+
+plt.tight_layout()
+plt.savefig("visualizations/age_vs_final_grade.png", dpi=300)
+plt.show()
 
 
 # Key project metrics
