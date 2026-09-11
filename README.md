@@ -8,6 +8,22 @@ The goal is to explore how different student, family, and school-related factors
 
 The project uses data analysis, visualization, and an interactive Streamlit dashboard to identify patterns and relationships in student performance.
 
+## 🚀 Live Dashboard
+
+Try the interactive Student Performance Analysis dashboard:
+
+👉 **[Open Live Dashboard](https://student-performance-analysis-7nvmad7feyzzwmf23yf8mr.streamlit.app/)**
+
+The deployed dashboard allows users to:
+
+- Filter students by gender
+- Filter by age
+- Filter by study time
+- Filter by final grade
+- Explore interactive charts
+- Analyze pass/fail performance
+- Download filtered student data
+
 ## 🛠️ Technologies Used
 
 - Python
