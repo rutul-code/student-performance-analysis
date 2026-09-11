@@ -6,7 +6,7 @@ This project analyzes student academic performance using Python and the UCI Stud
 
 The goal is to explore how different student, family, and school-related factors are associated with final academic performance.
 
-The project uses data analysis and visualization techniques to identify patterns and relationships in student performance.
+The project uses data analysis, visualization, and an interactive Streamlit dashboard to identify patterns and relationships in student performance.
 
 ## 🛠️ Technologies Used
 
@@ -14,6 +14,7 @@ The project uses data analysis and visualization techniques to identify patterns
 - Pandas
 - NumPy
 - Matplotlib
+- Streamlit
 - Git & GitHub
 
 ## 📁 Dataset
@@ -50,21 +51,85 @@ The project analyzes student performance using the following factors:
 - Higher education intention vs final grade
 - Age vs final grade
 - First, second, and final grade correlations
+- Average grade by school
+- Grade distribution by gender
+- Study time vs previous failures
+- Pass/Fail analysis
+- Overall pass rate
 
 ## 📈 Key Findings
 
 - The average final grade was **10.42 out of 20**.
 - Students with fewer previous failures generally had higher average final grades.
-- The second-period grade showed a **very strong relationship** with the final grade.
+- The second-period grade showed a **very strong relationship** with the final grade, with a correlation of approximately **0.90**.
 - Study time showed differences in average final grades across groups.
 - Students with internet access had a higher average final grade than students without internet access.
 - Students who intended to pursue higher education had a higher average final grade.
 - Absences showed very little linear correlation with final grade in this dataset.
 - Age showed a weak negative correlation with final grade.
+- Students from different schools showed differences in average final grades.
 
 > **Note:** These findings describe relationships observed in the dataset and should not be interpreted as proof of causation.
 
-## 📊 Visualizations
+## 📊 Interactive Streamlit Dashboard
+
+The project includes an interactive **Streamlit dashboard** for exploring student performance.
+
+### 🎛️ Dashboard Filters
+
+Users can filter the dataset by:
+
+- Gender
+- Age
+- Study Time
+- Final Grade
+
+The dashboard updates the analysis and key performance indicators based on the selected filters.
+
+### 📌 Dashboard Features
+
+- Key Performance Indicators
+- Performance Summary
+- Final Grade Distribution
+- Average Grade by School
+- Pass/Fail Analysis
+- Overall Pass Rate
+- Correlation Heatmap
+- Filtered dataset download
+
+### 📑 Dashboard Tabs
+
+The dashboard is organized into four sections:
+
+1. **📚 Academic Factors**
+   - Study Time vs Final Grade
+   - Previous Failures vs Final Grade
+   - School Support vs Final Grade
+   - Average Grade by School
+   - Study Time vs Previous Failures
+
+2. **👨‍👩‍👧 Student & Family**
+   - Gender vs Final Grade
+   - Internet Access vs Final Grade
+   - Family Support vs Final Grade
+   - Age vs Final Grade
+   - Grade Distribution by Gender
+
+3. **🎓 Education**
+   - Mother's Education vs Final Grade
+   - Father's Education vs Final Grade
+   - Higher Education Intention vs Final Grade
+
+4. **📈 Grade Relationships**
+   - Second Period Grade vs Final Grade
+   - Absences vs Final Grade
+   - Correlation Heatmap
+   - Pass/Fail Analysis
+   - Overall Pass Rate
+
+For this project, students with a final grade of **10 or above** are classified as **Pass**.
+
+## 📈 Visualizations
 
 The project generates visualizations including:
 
@@ -96,15 +161,16 @@ student-performance-analysis/
 │   ├── previous_failures_vs_final_grade.png
 │   ├── gender_vs_final_grade.png
 │   ├── internet_access_vs_final_grade.png
-│   ├── mother_education_vs_final_grade.png
+│   ├── mothers_education_vs_final_grade.png
 │   ├── fathers_education_vs_final_grade.png
 │   ├── school_support_vs_final_grade.png
 │   ├── family_support_vs_final_grade.png
 │   ├── higher_education_vs_final_grade.png
-│   ├── second_period_vs_final_grade.png
+│   ├── second_period_grade_vs_final_grade.png
 │   ├── absences_vs_final_grade.png
 │   └── age_vs_final_grade.png
 │
 ├── main.py
+├── dashboard.py
 ├── README.md
 └── requirements.txt
